@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>云鹿会展 - 新闻动态</title>
+    <meta name="viewport"
+          content="width=1200px, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="../../static/images/icon.png">
+    <link rel="stylesheet" href="../../common/css/reset.css">
+    <link rel="stylesheet" href="newsList.css">
+    <link rel="stylesheet" href="../headBar/headBar.css">
+    <link rel="stylesheet" href="../sideBar/sideBar.css">
+    <link rel="stylesheet" href="../bottom/bottom.css">
+    <link rel="stylesheet" href="../../static/css/swiper.min.css">
+    <script src="../../static/js/jquery-3.2.1.min.js"></script>
+    <script src="../../static/js/masonary-docs.min.js"></script>
+    <script src="newsList.js"></script>
+    <script src="../headBar/headBar.js"></script>
+    <script src="../sideBar/sideBar.js"></script>
+    <script src="../bottom/bottom.js"></script>
+</head>
+<body>
+<div class="wrap">
+    <div id="headBar"></div>
+    <div class="newsList">
+        <div class="content"><p>当前位置 :&ensp;<a href="">首页</a> >&ensp;<a href="">新闻动态</a></p>
+            <div class="HomePage">
+                <div class="w1200 ContactUs" style="height: 1230px;">
+                    <div class="title"><a href="#">新闻动态</a></div>
+                    <p><span></span></p><em>NEWS EVENTS</em>
+                    <div id="masonry" class="container-fluid">
+                        <div class="box a show"><img src="../../static/images/HomePage/Lb1.jpg">
+                            <div class="name"><span>国内首家智慧环境产业综合服务商--联运环境展览！</span><a href="#" class="buy">查看详情</a></div>
+                        </div>
+                        <div class="box a show"><img src="../../static/images/HomePage/News1.jpg">
+                            <div class="name"><span>恭喜云鹿展览展示(苏州)有限公司成为上海SIEE幼教展推荐搭建商！</span><a href="#" class="buy">查看详情</a></div>
+                        </div>
+                        <div class="box a show"><img src="../../static/images/HomePage/News3.jpg">
+                            <div class="name"><span>一米智联，打造教育O2O服务平台！</span><a href="#" class="buy">查看详情</a></div>
+                        </div>
+                        <div class="box a"><img src="../../static/images/HomePage/Lb4.jpg">
+                            <div class="name"><span></span><a href="#" class="buy">查看详情</a></div>
+                        </div>
+                        <div class="box b"><img src="../../static/images/HomePage/Lb5.jpg">
+                            <div class="name"><span></span><a href="#" class="buy">查看详情</a></div>
+                        </div>
+                        <div class="box c"><img src="../../static/images/HomePage/Lb6.jpg">
+                            <div class="name"><span></span><a href="#" class="buy">查看详情</a></div>
+                        </div>
+                        <div class="box a"><img src="../../static/images/HomePage/Lb1.jpg">
+                            <div class="name"><span></span><a href="#" class="buy">查看详情</a></div>
+                        </div>
+                        <div class="box b"><img src="../../static/images/HomePage/Lb2.jpg">
+                            <div class="name"><span></span><a href="#" class="buy">查看详情</a></div>
+                        </div>
+                        <div class="box c"><img src="../../static/images/HomePage/Lb3.jpg">
+                            <div class="name"><span></span><a href="#" class="buy">查看详情</a></div>
+                        </div>
+                        <div class="box a"><img src="../../static/images/HomePage/Lb4.jpg">
+                            <div class="name"><span></span><a href="#" class="buy">查看详情</a></div>
+                        </div>
+                        <div class="box b"><img src="../../static/images/HomePage/Lb5.jpg">
+                            <div class="name"><span></span><a href="#" class="buy">查看详情</a></div>
+                        </div>
+                        <div class="box c"><img src="../../static/images/HomePage/Lb6.jpg">
+                            <div class="name"><span></span><a href="#" class="buy">查看详情</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sideBar"></div>
+    <div id="bottom"></div>
+</div>
+</body>
+<script>
+    var $container = $('#masonry');
+    $container.imagesLoaded(function () {
+        $container.masonry({
+            itemSelector: '.box',
+            gutter: 50,
+            isAnimated: true,
+        });
+    });
+
+    $("#headBar").load("../headBar/headBar.html");
+    $("#sideBar").load("../sideBar/sideBar.html");
+    $("#bottom").load("../bottom/bottom.html");
+</script>
+</html>

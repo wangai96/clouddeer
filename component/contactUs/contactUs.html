@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>云鹿会展 - 联系我们</title>
+    <meta name="viewport"
+        content="width=1200px, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="../../static/images/icon.png">
+    <link rel="stylesheet" href="../../common/css/reset.css">
+    <link rel="stylesheet" href="contactUs.css">
+    <link rel="stylesheet" href="../headBar/headBar.css">
+    <link rel="stylesheet" href="../sideBar/sideBar.css">
+    <link rel="stylesheet" href="../bottom/bottom.css">
+    <link rel="stylesheet" href="../../static/css/swiper.min.css">
+    <script src="../../static/js/jquery-3.2.1.min.js"></script>
+    <!--运用vue或angular框架-->
+    <!--<script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
+    <script src="../../static/js/angular.min.js"></script>
+
+    <script src="contactUs.js"></script>
+    <script src="../headBar/headBar.js"></script>
+    <script src="../sideBar/sideBar.js"></script>
+    <script src="../bottom/bottom.js"></script>
+
+
+</head>
+<body>
+<div class="wrap" ng-app="myApp" ng-controller="contactController">
+    <div id="headBar"></div>
+    <div class="aboutUs">
+        <div class="content"><p>当前位置 :&ensp;<a href="">首页</a> >&ensp;<a href="">联系我们</a></p>
+            <div class="HomePage">
+                <div class="w1200 ContactUs" style="height: 420px;">
+                    <div class="title"><a href="#">联系我们</a></div>
+                    <p><span></span></p><em>LINK US</em>
+                    <div>
+                        <div class="ContactInfo">
+                            <div style="line-height: 30px;"><span class="wxColor">联系电话：</span>卜经理  Tel：18012616379
+                            	<br />
+                            	<span style="margin-left: 82px;">曾经理  Tel：18014009277</span>
+                            	<br />
+                            	<span style="margin-left: 82px;">潘经理  Tel：18014008518</span>
+                            </div>
+                            <p><span class="wxColor">QQ：</span> 513143361</p>
+                            <p><span class="wxColor">邮箱：</span> 513143361@qq.com</p>
+                            <p><span class="wxColor">地址：</span> 苏州工业园区东平街262号超擎大厦三层310室</p>
+                         </div>
+                        <div class="MessegeSubmit">
+                            <div><input type="text"  placeholder="姓名"> <input type="text"  placeholder="联系方式"></div>
+                            <textarea  placeholder="我们需要您的建议1，2，3"></textarea>
+                            <button type="button"  class="btn">提交信息</button>
+                            <!--<button type="button" ng-click="GetAllInfo()" class="btn_one">查询信息</button>-->
+                            <!--<button type="button" ng-click="GetAllInfo()" class="btn_one">查询信息</button>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--增删改查-->
+    <!--<div class="test">-->
+        <!--<div>-->
+            <!--<table>-->
+                <!--<tr>-->
+                    <!--<th>ID</th>-->
+                    <!--<th>名字</th>-->
+                    <!--<th>手机号</th>-->
+                    <!--<th>内容</th>-->
+                    <!--<th>创建时间</th>-->
+                    <!--<th>备注内容</th>-->
+                    <!--<th>删除</th>-->
+                    <!--<th>修改</th>-->
+                <!--</tr>-->
+                <!--<tr ng-repeat="stu in baseInfo">-->
+                    <!--<td>{{stu.ID}}</td>-->
+                    <!--<td >{{stu.NAME}}</td>-->
+                    <!--<td >{{stu.PHONE}}</td>-->
+                    <!--<td >{{stu.CONTENT}}</td>-->
+                    <!--<td>{{stu.CREATETIME}}</td>-->
+                    <!--<td >{{stu.MEMO}}</td>-->
+                    <!--<td><button ng-click="RemoveInfo(stu.ID)">删除</button></td>-->
+                    <!--<td><button ng-click="Update(stu)">修改</button></td>-->
+                <!--</tr>-->
+            <!--</table>-->
+        <!--</div>-->
+    <!--</div>-->
+    <div class="notice">
+        <div class="success"><i class="back"></i>
+            <p class="title">请确认您的信息</p>
+            <div><p><span>你的名字 :</span><span class="name"></span></p>
+                <p><span>你的手机 :</span><span class="tel"></span></p>
+                <p><span>你的需求1、2、3 :</span></p></div>
+            <div class="text"></div>
+            <button ng-click="AddInfo()" class="btn">OK,I wanna submit!</button>
+        </div>
+
+    </div>
+
+    <div id="sideBar"></div>
+    <div id="bottom"></div>
+
+</div>
+</body>
+<script>
+
+    $("#headBar").load("../headBar/headBar.html");
+    $("#sideBar").load("../sideBar/sideBar.html");
+    $("#bottom").load("../bottom/bottom.html");
+
+    //指定模板
+    var app = angular.module('myApp', []);
+    //指定的控制器
+    //$scope对象是angular内部提供的对象，隐式注入必须是$scope
+    app.controller('contactController', function($scope) {
+
+        var get_href = 'http://www.clouddeer-expo.com/api/LINK/GetAdvice';
+        var remove_href = 'http://www.clouddeer-expo.com/api/LINK/RemoveAdvice?ID=';
+        var add_href = 'http://www.clouddeer-expo.com/api/LINK/AddAdvice';
+        var update_href = 'http://www.clouddeer-expo.com/api/LINK/UpdateAdvice';
+
+
+        //查相关的信息
+        $scope.GetAllInfo = function(){
+            $.get(get_href).then(function(res) {
+                if(res && res!=null){
+                    $scope.baseInfo = JSON.parse(res).Table;
+                    console.log($scope.baseInfo);
+                }else{
+                    alert('老铁，一条记录都没有你敢信!');
+                }
+            })
+        }
+
+        // 增相关的信息
+        $scope.AddInfo = function(){
+            $scope.baseInfo = {};
+            $scope.baseInfo.ID = null;
+            $scope.baseInfo.NAME = $(".MessegeSubmit>div>input:nth-of-type(1)").val();
+            $scope.baseInfo.PHONE = $(".MessegeSubmit>div>input:nth-last-of-type(1)").val();
+            $scope.baseInfo.CONTENT = $(".wrap .notice .success div.text").text();
+            $.post(add_href, $scope.baseInfo).then(function(res) {
+                if(res == 1) {
+                   console.log('新增成功');
+                } else {
+                    console.log('新增失败');
+                }
+            })
+        }
+
+        // 删相关的信息
+        $scope.RemoveInfo = function(id){
+            $.get(remove_href + id).then(function(res) {
+                if(res == 1) {
+                    console.log('删掉啦!');
+                } else {
+                    console.log('删除失败!');
+                };
+            })
+        }
+
+        // 修改相关的信息
+        $scope.UpdataInfo = function(info) {
+            $.post(update_href,info).then(function(res) {
+                if (res == 1) {
+                    alert("修改成功");
+                } else {
+                    alert("修改失败");
+                }
+                ;
+            })
+        }
+
+    })
+
+
+</script>
+</html>

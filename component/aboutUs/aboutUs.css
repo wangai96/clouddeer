@@ -1,0 +1,195 @@
+@charset "UTF-8";
+.aboutUs .content .place {
+  float: left;
+  margin-left: 24px;
+  margin-top: 20px;
+  width: 350px;
+  height: 300px;
+  border: 1px solid #ddd;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 30px 10px;
+  -webkit-box-shadow: 2px 3px 10px #000;
+  -moz-box-shadow: 2px 3px 10px #000;
+  box-shadow: 2px 3px 10px #000;
+  border-top: 6px double #ff0;
+  border-top: 6px double #ff0; }
+
+.aboutUs .content .place p.title {
+  font-family: "微软雅黑";
+  font-size: 20px;
+  color: #1a1a1a;
+  margin: 12px 0; }
+
+.aboutUs .content .place p.title:nth-of-type(1) {
+  margin-top: 4px; }
+
+.ContactUs .text {
+  width: 640px;
+  height: 430px;
+  float: left;
+  border: 1px solid #ddd;
+  margin-left: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 30px 20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px; }
+
+.ContactUs .text p {
+  font-family: "微软雅黑";
+  font-size: 22px;
+  color: #1a1a1a;
+  margin: 12px 0; }
+
+.ContactUs .text div {
+  margin-bottom: 20px; }
+
+.ContactUs .text div span {
+  color: #ff4500;
+  font-style: 22px; }
+
+.ContactUs .img {
+  width: 440px;
+  height: 360px;
+  float: right;
+  margin-right: 40px;
+  margin-top: 30px; }
+
+.ContactUs .img div img {
+  width: 100%;
+  height: 100%; }
+
+.aboutUs .content .jobhunting {
+  margin: auto;
+  height: 560px;
+  width: 1000px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  padding: 10px 30px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px; }
+
+.aboutUs .content .jobhunting p {
+  margin-top: 6px; }
+
+.aboutUs .content .jobhunting div p {
+  text-indent: 80px; }
+
+.aboutUs .content .jobhunting p span:nth-of-type(1) {
+  font-family: "微软雅黑";
+  font-size: 20px;
+  color: #1a1a1a;
+  margin: 10px 0; }
+
+.aboutUs .content .jobhunting .jobname {
+  font-size: 20px; }
+
+.HomePage {
+  width: 100%;
+  margin-top: 50px; }
+
+.w1200 {
+  width: 1200px;
+  margin: auto; }
+
+.IndexSwiper {
+  height: 450px; }
+
+.IndexSwiper .swiper-slide {
+  background-size: cover; }
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center; }
+
+.ContactUs {
+  background-color: #fff; }
+
+.ContactUs > div.title {
+  line-height: 36px;
+  text-align: center;
+  font-size: 32px;
+  color: #007bc4;
+  padding: 30px 0 15px; }
+
+.ContactUs > div.title > a {
+  color: #1a1a1a;
+  margin: auto; }
+
+.ContactUs > p {
+  background: #d7d4d4;
+  height: 1px;
+  overflow: hidden;
+  line-height: 0; }
+
+.ContactUs > p > span {
+  margin: 0 auto;
+  display: block;
+  height: 1px;
+  overflow: hidden;
+  width: 86px;
+  background: #3ab035;
+  line-height: 1px; }
+
+.ContactUs em {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: #999;
+  padding-top: 10px;
+  font-family: 微软雅黑;
+  margin-bottom: 20px;
+  font-style: inherit; }
+
+.aboutUs {
+  width: 1200px;
+  height: auto;
+  background-color: #f7f7f7;
+  border: 1px solid #f7f7f7;
+  margin: auto; }
+
+.aboutUs .content {
+  width: 1200px;
+  margin: auto; }
+
+.aboutUs .content > p {
+  margin-top: 30px;
+  height: 14px;
+  line-height: 14px;
+  text-indent: 5px;
+  font-family: "微软雅黑"; }
+
+.aboutUs .content > p > a {
+  text-decoration: none;
+  color: #000; }
+
+.aboutUs .content > p > a:nth-of-type(2) {
+  color: #008d49; }
+
+.aboutUs .content .news {
+  height: 465px;
+  border: 1px solid #ddd;
+  float: right;
+  width: 800px;
+  overflow: hidden;
+  font-family: "微软雅黑"; }
+
+/*# sourceMappingURL=aboutUs.css.map */

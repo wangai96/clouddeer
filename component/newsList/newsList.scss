@@ -1,0 +1,151 @@
+@charset "UTF-8";
+.newsList {
+  width: 1200px;
+  height: auto;
+  background-color: #f7f7f7;
+  border: 1px solid #f7f7f7;
+  margin: auto
+}
+
+.newsList .content {
+  width: 1200px;
+  margin: auto
+}
+
+.newsList .content > p {
+  margin-top: 30px;
+  height: 14px;
+  line-height: 14px;
+  text-indent: 5px;
+  font-family: "微软雅黑"
+}
+
+.newsList .content > p > a {
+  text-decoration: none;
+  color: #000
+}
+
+.newsList .content > p > a:nth-of-type(2) {
+  color: #008d49
+}
+
+.newsList .content .news {
+  height: 300px;
+  margin-top: 20px;
+  border: 1px solid #ddd
+}
+
+.ContactUs {
+  background-color: #fff
+}
+
+.ContactUs > div.title {
+  line-height: 36px;
+  text-align: center;
+  font-size: 32px;
+  color: #007bc4;
+  padding: 30px 0 15px;
+  margin-top: 15px
+}
+
+.ContactUs > div.title > a {
+  color: #1a1a1a;
+  margin: auto
+}
+
+.ContactUs > p {
+  background: #d7d4d4;
+  height: 1px;
+  overflow: hidden;
+  line-height: 0
+}
+
+.ContactUs > p > span {
+  margin: 0 auto;
+  display: block;
+  height: 1px;
+  overflow: hidden;
+  width: 86px;
+  background: #3ab035;
+  line-height: 1px
+}
+
+.ContactUs em {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: #999;
+  padding-top: 10px;
+  font-family: 微软雅黑;
+  margin-bottom: 20px;
+  font-style: inherit
+}
+
+.container-fluid {
+  padding: 20px;
+  height: auto;
+  margin: auto;
+  outline: 1px solid #ddd
+}
+
+.box {
+  margin-bottom: 20px;
+  float: left;
+  width: 252px;
+  cursor: pointer;
+  position: relative
+}
+
+.box .name {
+  width: 100%;
+  text-indent: 20px;
+  border: 1px solid #90ee90;
+  position: absolute;
+  bottom: 0;
+  height: 80px;
+  box-sizing: border-box;
+  padding: 0 10px;
+  border-top: none
+}
+
+.box .buy {
+  color: #000;
+  position: absolute;
+  right: 10px;
+  bottom: 12px
+}
+
+.box .buy:hover {
+  cursor: pointer
+}
+
+.box img {
+  max-width: 100%
+}
+
+.a {
+  height: 300px;
+  outline: 1px solid pink
+}
+
+.b {
+  height: 320px;
+  outline: 1px solid #ff0
+}
+
+.c {
+  height: 340px;
+  outline: 1px solid #add8e6
+}
+
+.a img, .b img, .c img {
+  height: 70%
+}
+
+#masonry .box .name span {
+  color: #7b7b7b
+}
+
+#masonry .box:not(.show) {
+  visibility: hidden
+}

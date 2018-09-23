@@ -1,0 +1,230 @@
+@charset "UTF-8";
+.HomePage {
+  width: 100%;
+  margin-top: 50px
+}
+
+.w1200 {
+  width: 1200px;
+  margin: auto
+}
+
+.aroundGive {
+  width: 1200px;
+  height: auto;
+  background-color: #f7f7f7;
+  border: 1px solid #f7f7f7;
+  margin: auto
+}
+
+.aroundGive .content {
+  width: 1200px;
+  margin: auto
+}
+
+.aroundGive .content > p {
+  margin-top: 30px;
+  height: 14px;
+  line-height: 14px;
+  text-indent: 5px;
+  font-family: "微软雅黑";
+  margin-bottom: 50px
+}
+
+.aroundGive .content > p > a {
+  text-decoration: none;
+  color: #000
+}
+
+.aroundGive .content > p > a:nth-of-type(2) {
+  color: #008d49
+}
+
+.aroundGive .content .news {
+  height: auto;
+  margin-top: 20px;
+  border: 1px solid #ddd
+}
+
+.ContactUs {
+  background-color: #fff
+}
+
+.ContactUs > div.title {
+  line-height: 36px;
+  text-align: center;
+  font-size: 32px;
+  color: #007bc4;
+  padding: 30px 0 15px
+}
+
+.ContactUs > div.title > a {
+  color: #1a1a1a;
+  margin: auto
+}
+
+.ContactUs > p {
+  background: #d7d4d4;
+  height: 1px;
+  overflow: hidden;
+  line-height: 0
+}
+
+.ContactUs > p > span {
+  margin: 0 auto;
+  display: block;
+  height: 1px;
+  overflow: hidden;
+  width: 86px;
+  background: #3ab035;
+  line-height: 1px
+}
+
+.ContactUs em {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: #999;
+  padding-top: 10px;
+  font-family: 微软雅黑;
+  margin-bottom: 20px;
+  font-style: inherit
+}
+
+.HomePage .box {
+  width: 1200px;
+  height: 780px;
+  padding: 30px;
+  box-sizing: border-box;
+  border: 4px double #d7d4d4;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border-bottom: none;
+  background: url(../../static/images/bg_leaf.jpg) center no-repeat;
+  -webkit-background-size: 1200px 780px;
+  background-size: 1200px 780px
+}
+
+.HomePage .content {
+  width: 220px;
+  height: 340px;
+  border: 1px solid #ddd;
+  float: left;
+  margin-left: 50px;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 2
+}
+
+.HomePage .content:nth-of-type(1) {
+  height: 220px
+}
+
+.horse .content:not(.logosearch) {
+  background-color: rgba(25, 25, 25, .1);
+  border: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px
+}
+
+.horse .content:not(.logosearch) > div {
+  width: 170px;
+  height: 170px;
+  margin: 20px auto;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px
+}
+
+.horse .content:nth-of-type(1) > div {
+  width: 220px;
+  height: 220px;
+  background: url(../../static/images/logo.jpg) center no-repeat;
+  background-size: 220px 120px
+}
+
+.horse .content p.title {
+  width: 180px;
+  height: 120px;
+  line-height: 30px;
+  font-size: 16px;
+  color: #3c3c3c;
+  font-family: 微软雅黑;
+  margin: 10px auto;
+  text-indent: 20px;
+  background-color: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 6px
+}
+
+.horse .content p.title d {
+  display: block;
+  float: left;
+  width: 100%
+}
+
+.horse .content p.title d:nth-of-type(1) {
+  text-indent: 70px;
+  color: #000;
+  font-weight: 700
+}
+
+.horse .content p.title d:nth-of-type(3) {
+  line-height: 16px
+}
+
+.horse .content p.title d:nth-of-type(3) span {
+  font-size: 15px
+}
+
+.logosearch > div:nth-of-type(1) {
+  width: 220px;
+  height: 220px;
+  position: relative;
+  float: left;
+  box-shadow: 0 0 10px 2px #ddd
+}
+
+.logosearch > div:nth-of-type(1):after, .logosearch > div:nth-of-type(1):before {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  top: -5px;
+  left: -5px;
+  border: 5px solid #000;
+  z-index: 10;
+  box-sizing: border-box;
+  -webkit-animation: clipAni 6s infinite linear
+}
+
+.logosearch > div:nth-of-type(1):before {
+  -webkit-animation-delay: -2s
+}
+
+@keyframes clipAni {
+  0%, 100% {
+    clip: rect(0, 230px, 230px, 227px);
+    border: 5px solid #ff1493
+  }
+  25% {
+    clip: rect(0, 230px, 3px, 0);
+    border: 5px solid #00bfff
+  }
+  50% {
+    clip: rect(0, 3px, 230px, 0);
+    border: 5px solid #9acd32
+  }
+  75% {
+    clip: rect(227px, 230px, 230px, 0);
+    border: 5px solid #ff4500
+  }
+}

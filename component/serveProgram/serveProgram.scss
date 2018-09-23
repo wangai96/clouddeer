@@ -1,0 +1,104 @@
+@charset "UTF-8";
+.serveProgram {
+  width: 1200px;
+  height: auto;
+  background-color: #f7f7f7;
+  border: 1px solid #f7f7f7;
+  margin: auto
+}
+
+.serveProgram .content {
+  width: 1200px;
+  margin: auto
+}
+
+.serveProgram .content > p {
+  margin-top: 30px;
+  height: 14px;
+  line-height: 14px;
+  text-indent: 5px;
+  font-family: "微软雅黑"
+}
+
+.serveProgram .content > p > a {
+  text-decoration: none;
+  color: #000
+}
+
+.serveProgram .content > p > a:nth-of-type(2) {
+  color: #008d49
+}
+
+.serveProgram .content .news {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  padding: 20px
+}
+
+.serverTitle {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 40px;
+  padding-bottom: 20px;
+  color: #000
+}
+
+.tIndent {
+  text-indent: 30px
+}
+
+.center {
+  text-align: center
+}
+
+.blod {
+  font-weight: 600
+}
+
+.news img {
+  display: block;
+  margin: auto
+}
+
+.BigTitle > a {
+  font-size: 32px;
+  line-height: 36px;
+  color: #000;
+  text-align: center
+}
+
+.BigTitle > p {
+  background: #d7d4d4;
+  height: 1px;
+  overflow: hidden;
+  line-height: 0;
+  margin-top: 10px
+}
+
+.BigTitle > p > span {
+  margin: 0 auto;
+  display: block;
+  height: 1px;
+  overflow: hidden;
+  width: 86px;
+  background: #3ab035;
+  line-height: 1px
+}
+
+.BigTitle em {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: #999;
+  padding-top: 10px;
+  font-family: 微软雅黑;
+  margin-bottom: 20px;
+  font-style: inherit
+}
+
+.design > p {
+  margin: 10px 0;
+  font-size: 16px;
+  line-height: 30px
+}

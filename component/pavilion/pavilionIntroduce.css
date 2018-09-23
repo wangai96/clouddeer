@@ -1,0 +1,33 @@
+.pavilionPage{
+	width: 1200px;
+	margin: auto;
+	background-color: white;
+	padding: 20px 0;
+	box-sizing: border-box;
+}
+/* 江浙沪 三个省会 + 图片*/
+.provinceList > div{
+	color: white;
+	background-color: black;
+	width: 120px;
+	height: 60px;
+	display: inline-block;
+	margin-left: 20px;
+	text-align: center;
+	position: relative;
+}
+.provinceList > div>span{
+	position: absolute;
+	z-index: 3;
+	left: 0;
+	top: 0;
+	width: 120px;
+	height: 60px;
+	font-size: 20px;
+	line-height: 60px;
+	color: white;
+}
+.provinceList img{
+	width: 120px;
+	height: 60px;
+}
